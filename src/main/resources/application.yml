@@ -1,11 +1,19 @@
 server:
-  port: 8888
+  port: 8082
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
 
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/umasuo/test-config-repo
-          username: ourusername
-          password: ourpassword
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reactivesw
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: io.reactivesw.database.dialect.JSONBPostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
