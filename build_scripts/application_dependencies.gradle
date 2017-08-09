@@ -1,9 +1,7 @@
 // Declare application repositories and dependencies
 // Auto manage all spring boot dependencies
 
-
 dependencies {
     // Spring
     compile("org.springframework.cloud:spring-cloud-config-server")
-
 }
