@@ -5,7 +5,7 @@ services:
   - docker
 script:
   - ./gradlew clean
-  - ./gradlew build
+  - ./gradlew wrapper
   - ./gradlew build buildDocker --info
 
 after_success:
